@@ -1,0 +1,28 @@
+extends layout
+block content
+
+        p Welcome to Index
+        form(name='newCategory', action='/categories/new', method='post')
+        .form-group
+          label(for='categoryId') Category Id
+          |         
+          input.form-control(name='CategoryId', type='text')
+        |     
+        .form-group
+          label(for='categoryName') Category Name
+          |         
+          input.form-control(name='CategoryName', type='text')
+        |     
+        .form-group
+          label(for='nickname') Description
+          |         
+          input.form-control(name='Description', type='textArea')
+        |     
+        input(type='button', value='Cancel', onclick='goBack()')
+        |  &nbsp;
+        |     
+        input.btn.btn-primary(type='submit', value='Submit')  
+ script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js')
+ script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')
+ script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js')
+

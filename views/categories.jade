@@ -1,0 +1,22 @@
+extends layout
+block content
+  .form-group
+  table.table.table-striped
+    thead
+      tr
+        th Category ID
+        th Category Name
+        th Description
+      tbody
+        each category in categories
+          tr
+            td= category.CategoryId
+            td= category.CategoryName
+            td= category.Description
+      tr
+  - var btnText = "New";    
+  a.btn.btn-primary(href='/category/new') #{btnText}
+  script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js')
+

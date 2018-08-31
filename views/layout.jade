@@ -1,0 +1,44 @@
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Chat
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='style.css')
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand(href='#') Northwind
+        ul.nav.navbar-nav
+          li.nav-item.active
+            a(href='/')
+              | Home
+              span.sr-only (current)
+          li
+            a.nav-link(href='/category') Category
+          li
+            a.nav-link(href='/product') Product
+          li
+            a.nav-link(href='/orders') Order
+          li
+            a.nav-link(href='/orderdetails') Order Details
+          li
+            a.nav-link(href='/supplier') Supplier
+          li
+            a.nav-link(href='/shipper') Shipper
+          li
+            a.nav-link(href='/region') Region
+          li
+            a.nav-link(href='/territory') Territory
+          li
+            a.nav-link(href='/customer') Customer
+          li
+            a.nav-link(href='/employee') Employee
+    .container
+      .main-content
+          h1 #{title}
+          block content

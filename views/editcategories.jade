@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  p Welcome to Index
+form(name='editCategory', action='/categories/update', method='post')
+  .form-group
+    label(for='categoryId') Category Id
+    |         
+    input#id(type='hidden', value='<%= category._id %>')
+    |         
+    input#CategoryId.form-control(type='text', value='<%= category.CategoryId %>', readonly='true')
+  |     
+  .form-group
+    label(for='categoryName') Category Name
+    |         
+    input#CategoryName.form-control(type='text', value='<%= category.CategoryName %>')
+  |     
+  .form-group
+    label(for='nickname') Description
+    |         
+    input#Description.form-control(type='textArea', value='<%= category.Description %>')
+  |     
+  input(type='button', value='Cancel', onclick='goBack()')
+  |  &nbsp;
+  |     
+  input.btn.btn-primary(type='submit', value='Submit')  
+ script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js')
+ script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')
+ script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js')
+
